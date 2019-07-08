@@ -1,0 +1,10 @@
+{
+    "user1":{"pass":"pass1","ava":1,"group":"Hunters"},
+    "user2":{"pass":"pass2","ava":2,"group":"Gliders"},
+    "user3":{"pass":"pass3","ava":3,"group":"Tweeters"},
+    "user4":{"pass":"pass4","ava":4,"group":"Waddlers"},
+    "user5":{"pass":"pass5","ava":5,"group":"Waddlers"},
+    "user6":{"pass":"pass6","ava":6,"group":"Waddlers"},
+    "user7":{"pass":"pass7","ava":7,"group":"Waddlers"},
+    "user8":{"pass":"pass8","ava":8,"group":"Waddlers"}
+}

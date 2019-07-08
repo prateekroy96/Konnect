@@ -1,0 +1,49 @@
+/*Custom scrollbar*/
+
+/* width */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #00060D;
+  border-radius: 10px;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #709CAA;
+  border-radius: 100\px;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3E606F;
+}
+
+.navbar {
+  color: white;
+  z-index: 1;
+  /* Stay on top */
+  height: 70px;
+}
+
+#search, #searchresults {
+  padding: 10px;
+}
+
+#text, #partybox {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#party {
+  height: 330px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

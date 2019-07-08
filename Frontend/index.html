@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Konnect</title>
+
+
+</head>
+
+<body>
+    <div id="home">
+        <nav class="navbar navbar-expand-lg" style="height: 10vh; background-color: #00060d; color: white">
+            <p class="display-4"><b>Konnect</b></p>
+        </nav>
+        <div class="container-fluid row"
+            style="align-items: stretch;height:90vh; width: 100%; margin: 0px; padding:0px">
+            <!--register-->
+            <div class="col-sm border-right" style="background-color: #021426; color: white">
+                <h5 class="display-4" align="center" style="padding-top: 5vh">Register</h5>
+                <form style="padding: 20px">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" id="user-reg" placeholder="Enter username">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" id="pass-reg" placeholder="Enter Password">
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" class="form-control" id="pass2-reg" placeholder="Re-enter Password">
+                    </div>
+                    <div class="form-group">
+                        <label>Select Avatar</label>
+                    </div>
+                    <!--images-->
+                    <div class="input-group form-group">
+                        <!--img1-->
+                        <div class="input-group-prepend" style="margin: 10px">
+
+                            <input type="radio" name="img" value="1" style="position: relative; top:15px">
+
+
+                            <img src="Avatars/1.png" alt="profile" class="rounded"
+                                style="position:relative; top: 0px; width: 90px; height: 90px; padding: 5px;">
+                        </div>
+                        <!--img2-->
+                        <div class="input-group-prepend" style="margin: 10px">
+
+                            <input type="radio" name="img" value="2" style="position: relative; top:15px">
+
+
+                            <img src="Avatars/2.png" alt="profile" class="rounded"
+                                style="position:relative; top: 0px; width: 90px; height: 90px; padding: 5px;">
+                        </div>
+                        <!--img3-->
+                        <div class="input-group-prepend" style="margin: 10px">
+
+                            <input type="radio" name="img" value="3" style="position: relative; top:15px">
+
+
+                            <img src="Avatars/3.png" alt="profile" class="rounded"
+                                style="position:relative; top: 0px; width: 90px; height: 90px; padding: 5px;">
+                        </div>
+                        <!--img4-->
+                        <div class="input-group-prepend" style="margin: 10px">
+
+                            <input type="radio" name="img" value="4" style="position: relative; top:15px">
+
+
+                            <img src="Avatars/4.png" alt="profile" class="rounded"
+                                style="position:relative; top: 0px; width: 90px; height: 90px; padding: 5px;">
+                        </div>
+                        <!--img5-->
+                        <div class="input-group-prepend" style="margin: 10px">
+
+                            <input type="radio" name="img" value="5" style="position: relative; top:15px">
+
+
+                            <img src="Avatars/5.png" alt="profile" class="rounded"
+                                style="position:relative; top: 0px; width: 90px; height: 90px; padding: 5px;">
+                        </div>
+
+                        <!--img6-->
+                        <div class="input-group-prepend" style="margin: 10px">
+
+                            <input type="radio" name="img" value="6" style="position: relative; top:15px">
+
+
+                            <img src="Avatars/6.png" alt="profile" class="rounded"
+                                style="position:relative; top: 0px; width: 90px; height: 90px; padding: 5px;">
+                        </div>
+                        <!--img7-->
+                        <div class="input-group-prepend" style="margin: 10px">
+
+                            <input type="radio" name="img" value="7" style="position: relative; top:15px">
+
+
+                            <img src="Avatars/7.png" alt="profile" class="rounded"
+                                style="position:relative; top: 0px; width: 90px; height: 90px; padding: 5px;">
+                        </div>
+                        <!--img8-->
+                        <div class="input-group-prepend" style="margin: 10px">
+
+                            <input type="radio" name="img" value="8" style="position: relative; top:15px">
+
+
+                            <img src="Avatars/8.png" alt="profile" class="rounded"
+                                style="position:relative; top: 0px; width: 90px; height: 90px; padding: 5px;">
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <input id="reg" type="button" class="btn btn-primary btnSeccion" value="Register" />
+
+                </form>
+            </div>
+
+            <!--login-->
+            <div class="col-sm border-right" style="background-color: #0A2540; color: white">
+                <h5 class="display-4" align="center" style="padding-top: 5vh">Login</h5>
+                <form style="padding: 20px">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" id="user-log" placeholder="Enter username">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" id="pass-log" placeholder="Enter Password">
+                    </div>
+                    <input id="log" type="button" class="btn btn-success btnSeccion" value="Login" />
+                </form>
+            </div>
+
+            <!--deactivate-->
+            <div class="col-sm" style="background-color: #163859; color: white">
+                <h5 class="display-4" align="center" style="padding-top: 5vh">Deactivate</h5>
+                <form style="padding: 20px">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" id="user-de" placeholder="Enter username">
+                        <small class="form-text">Your user data will be permanantly removed.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" id="pass-de" placeholder="Enter Password">
+                    </div>
+                    <div class="form-check form-group">
+                        <input type="checkbox" class="form-check-input" id="check-de">
+                        <label class="form-check-label">Confirm Deactivation</label>
+                    </div>
+
+                    <input id="de" type="button" class="btn btn-danger btnSeccion" value="Deactivate" />
+
+
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="room">
+        <nav class="navbar" style="height: 60px; background-color: #00060d; color: white">
+            <a class="navbar-brand">Konnect</a>
+            <form class="form-inline">
+                <input id="logout" type="button" class="btn btn-outline-danger" value="Logout">
+
+            </form>
+        </nav>
+        <!--sidebar-->
+        <div class="container-fluid d-flex" style="background-color: #163859;padding-right: 0px">
+            <div class="sidenav"
+                style="background-color: #021426;color: white;height: 100%;width:350px ;position: fixed;z-index: 0.5;top: 40px;left: 0px;overflow-x: hidden;padding-top: 20px;">
+                <form class="form-inline" id="search">
+                    <input id="searchinp" class="form-control mr-sm-2 flex-fill" type="text" placeholder="Search"
+                        aria-label="Search">
+                    <input id="searchbtn" type="button" class="btn btn-outline-primary btnSeccion" value="Search" />
+
+                </form>
+                <div class="" id="searchresults" style="height: 90px">
+
+                </div>
+                <div id="partybox">
+                    <div class="border-top border-bottom" id="party">
+                        <h6 id="g-val">
+                        </h6>
+                                <div id="m" class="overflow-auto" style="height:280px">
+
+                                </div>
+                    </div>
+                </div>
+                <div style="height: 340px; padding: 10px">
+                    <h6>Notifications</h6>
+                    <div id="notify" class="overflow-auto" style="height:255px">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--messagebox-->
+            <div id="msgbox" class="overflow-auto flex-grow-1" style="padding-left: 335px;height:90vh">
+                <nav class="navbar navbar-expand-lg"
+                    style="position:fixed;width:90%;height: 60px; background-color: #0A2540; color: white">
+                    <a class="navbar-brand">Join a Group: </a>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <input id="g" type="button" class="nav-link btn btn-outline-info" value="Gliders"
+                                    style="margin-left: 10px;width: 110px">
+                            </li>
+                            <li class="nav-item">
+                                <input id="h" type="button" class="nav-link btn btn-outline-info" value="Hunters"
+                                    style="margin-left: 10px;width: 110px">
+                            </li>
+                            <li class="nav-item">
+                                <input id="t" type="button" class="nav-link btn btn-outline-info" value="Tweeters"
+                                    style="margin-left: 10px;width: 110px">
+                            </li>
+                            <li class="nav-item">
+                                <input id="w" type="button" class="nav-link btn btn-outline-info" value="Waddlers"
+                                    style="margin-left: 10px;width: 110px">
+                            </li>
+                            <li class="nav-item">
+                                <input id="leave" type="button" class="nav-link btn btn-outline-danger"
+                                    value="Leave Group" style="margin-left: 10px;width: 110px">
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div id="msg" class=""
+                    style="background-color:#163859;color: white;position:relative; top: 60px; padding: 15px;padding-bottom: 90px">
+
+                </div>
+
+
+            </div>
+
+
+            <div class="navbar fixed-bottom border-top row"
+                style="height: 90px; background-color: #00060d; color: white">
+                <span class="" id="profile" style="padding-left: 20px;width: 350px">
+                    <!--profile button-->
+                    <div class="btn-group dropup" style="margin: 3px">
+                        <button type="submit" class="btn btn-outline-light">
+                            <div id="test" class="border rounded" style="height: 50px; width: 240px">
+                                <div id="prof-img" style="position:relative;top:-13px; left:0px; display: inline-block">
+
+                                </div>
+                                <div
+                                    style="position:relative; display:inline-block; left:-20px; top:0px; width: 180px; height: 50px">
+                                    <span id="name" style="display:inline-flex;"></span><br>
+                                    <small id="stat" style="display:inline-flex;">
+
+                                    </small>
+                                </div>
+                            </div>
+                        </button>
+                        <button type="button" class="btn btn-outline-light dropdown-toggle dropdown-toggle-split"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Change Status</a>
+                            <div class="dropdown-divider"></div>
+                            <a id="o" class="dropdown-item" href="#">Online</a>
+                            <a id="a" class="dropdown-item" href="#">Away</a>
+                            <a id="b" class="dropdown-item" href="#">Busy</a>
+                        </div>
+                    </div>
+
+                </span>
+                <span class="flex-fill border-left" id="text">
+                    <form class="form-inline" id="text">
+                        <input id="to" class="form-control mr-sm-2" type="at" placeholder="@" aria-label="@">
+                        <input id="txt" class="form-control mr-sm-2 flex-fill" type="text" placeholder="Message"
+                            aria-label="Message">
+                        <input id="send" type="button" class="btn btn-outline-success btnSeccion" value="Send" />
+
+                    </form>
+                </span>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+
+<!--Bottstrap and jquery-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+<script src="https://code.jquery.com/jquery-3.4.0.js"> </script>
+
+<!--socket.io-->
+<script src="/socket.io/socket.io.js"></script>
+
+<!--Essentials-->
+<script src="functions.js"></script>
+
+<script src="index.js"></script>
+
+<script type="text/javascript">
+    window.onbeforeunload = function () {
+        return "Dude, are you sure you want to leave? Think of the kittens!";
+    }
+</script>
+
+</html>
