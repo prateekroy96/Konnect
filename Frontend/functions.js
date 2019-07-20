@@ -1,5 +1,4 @@
 notify = function (str, c = "warning") {
-    //console.log(str);
     $('#notify').append(`<div class="text-${c}"><small>${str}</small></div>`);
     $('#notify').scrollTop($('#notify')[0].scrollHeight);
 }

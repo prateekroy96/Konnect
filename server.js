@@ -12,9 +12,6 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use('/Konnect', express.static(path.join(__dirname, 'Frontend')));
 
-//app.post('/chatroom', express.static(path.join(__dirname, 'Frontend/room.html')));
-
-
 //CHAT
 let online_user_data = {};
 
@@ -32,7 +29,6 @@ is_reg = function (user, pass) {
 
 //one instance for each user
 io.on('connection', (socket) => {
-  //console.log("New socket formed from " + socket.id)
   socket.emit('connected');
 
   //login
@@ -41,8 +37,6 @@ io.on('connection', (socket) => {
     //reading JSON database
     let rawdata = fs.readFileSync('database.json');
     let allusers = JSON.parse(rawdata);
-    //console.log(allusers[data.user]);
-    //console.log(allusers[data.user].pass);
 
     let access = false;
     if (online_user_data[data.user] != null) {
@@ -58,11 +52,7 @@ io.on('connection', (socket) => {
 
 
     if (access) {
-
-      //console.log("new user logged in. All online user data:");
-      // username is in data.user
       online_user_data[data.user] = { id: socket.id, status: data.status, group: allusers[data.user].group, ava: allusers[data.user].ava };
-      //console.log(online_user_data);
     }
 
   })
@@ -145,34 +135,25 @@ io.on('connection', (socket) => {
   //list update
   socket.on('list-update', (g) => {
     let members = group_maker(g);
-    console.log('following members in group ' + g);
-    console.log(members);
     for (var m in members)
       io.to(members[m].id).emit('list-update-res', members);
   })
 
   //disconnect
   socket.on('disconnect', function () {
-    console.log(socket.id + ' Got disconnect!');
     let g = "";
     for (let del_user in online_user_data) {
       if (online_user_data[del_user].id == socket.id) {
         g = online_user_data[del_user].group;
-        console.log(g);
         delete online_user_data[del_user];
-        console.log('deleting ' + socket.id);
       }
     }
     if (g != "") {
-
       let members = group_maker(g);
-      console.log('following members in group ' + g);
-      console.log(members);
       for (var m in members)
         io.to(members[m].id).emit('list-update-res', members);
-
     }
-    //console.log(online_user_data);
+
   });
 
   //Register
@@ -182,7 +163,7 @@ io.on('connection', (socket) => {
     if (allusers[data.user] != null)
       io.to(socket.id).emit('alert', 'Username taken');
     else {
-      allusers[data.user] = {pass: data.pass,ava: data.ava,group: data.group};
+      allusers[data.user] = { pass: data.pass, ava: data.ava, group: data.group };
       let str = JSON.stringify(allusers);
       fs.writeFileSync('database.json', str);
       io.to(socket.id).emit('alert', 'Registration Successful!');
@@ -194,8 +175,8 @@ io.on('connection', (socket) => {
     let rawdata = fs.readFileSync('database.json');
     let allusers = JSON.parse(rawdata);
     if (allusers[data.user] == null)
-    io.to(socket.id).emit('alert', 'User does not exist');
-    else if (allusers[data.user].pass == data.pass){
+      io.to(socket.id).emit('alert', 'User does not exist');
+    else if (allusers[data.user].pass == data.pass) {
       delete allusers[data.user];
       let str = JSON.stringify(allusers);
       fs.writeFileSync('database.json', str);
@@ -208,5 +189,5 @@ io.on('connection', (socket) => {
 })
 
 http.listen(3000, function () {
-  console.log('listening on *:3000');
+  console.log('listening on *:3000 \nVisit: http://localhost:3000/Konnect/');
 });

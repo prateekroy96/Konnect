@@ -5,7 +5,6 @@ var socket = io();
 //
 update_group = function (g) {
     if (g != "")
-       // console.log('sending request for ' + g);
     socket.emit('list-update', g);
     else
     $('#m').empty();
@@ -57,7 +56,6 @@ $(function () {
         let unchecked_username = $("#user-log").val();
         let unchecked_password = $("#pass-log").val();
         if (unchecked_username != "" && unchecked_password != "") {
-            //console.log("username not null");
 
             socket.emit('login', {
                 user: unchecked_username,
@@ -67,8 +65,6 @@ $(function () {
         }
         else
             alert("No username or password");
-
-        //location.replace("/room.html");
     }
     $('#user-log').keypress(function (e) {
         var key = e.which;
@@ -89,8 +85,6 @@ $(function () {
 
     socket.on("access", function (data) {
         notify("Welcome to Konnect!<br>Type username in @ textbox to wisper<br>Type @g in @ textbox to send group message<br>----------------------------------------------------------","success");
-        //location.replace("/room.html");
-        //console.log("location replaced");
 
         user = data.user;
         pass = data.pass;
@@ -116,12 +110,10 @@ $(function () {
         else
         $('#g-val').append("Group: No Group");
         update_group(group);
-        //console.log(group);
     })
 
     //status change
     $('#o').click(function () {
-        //console.log("change status");
         if (status != "Online") {
             socket.emit('status-change', {
                 user: user,
@@ -132,7 +124,6 @@ $(function () {
         else notify("Status is already online");
     })
     $('#a').click(function () {
-        //console.log("change status");
         if (status != "Away") {
             socket.emit('status-change', {
                 user: user,
@@ -143,7 +134,6 @@ $(function () {
         else notify("Status is already away");
     })
     $('#b').click(function () {
-        //console.log("change status");
         if (status != "Busy") {
             socket.emit('status-change', {
                 user: user,
@@ -154,7 +144,6 @@ $(function () {
         else notify("Status is already busy");
     })
     socket.on('status-update', (data) => {
-        //console.log("recieved status");
         status = data;
         $("#stat").empty();
         $("#stat").append(status);
@@ -292,10 +281,9 @@ $(function () {
     //list update
     socket.on('list-update-res', (M) => {
         $('#m').empty();
-        console.log(M);
+
         for (let m in M) {
-            console.log(m);
-            console.log("name :" + m + " ava:" + M[m].ava + " status:" + M[m].status);
+
             $('#m').append(list_add(m + "", M[m].ava, M[m].status));
         }
     })
@@ -311,7 +299,7 @@ $(function () {
         let r_user = $("#user-reg").val();
         let r_pass = $("#pass-reg").val();
         let r_pass2 = $("#pass2-reg").val();
-        console.log(r_ava, r_user, r_pass, r_pass2);
+        
         if (r_ava == undefined || r_user == undefined || r_pass == undefined || r_pass2 == undefined)
             alert("Fill all the details!");
         else if (r_user.length > 15)
@@ -350,7 +338,6 @@ $(function () {
     deact = function () {
         let d_user = $('#user-de').val();
         let d_pass = $('#pass-de').val();
-        console.log($('#check-de').is(":checked"), d_user, d_pass);
         if ($('#check-de').is(":checked") && d_user != undefined && d_pass != undefined) {
             socket.emit('deactivate', { user: d_user, pass: d_pass });
         }
