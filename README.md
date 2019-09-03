@@ -1,13 +1,13 @@
 # Konnect - Messaging app
 
-Konnect is messaging app hosted over local server. 
+Konnect is messaging app.
 
 ## Quick Start
 ```bash
 #Install dependencies
 $npm install
 
-#Start local server at localhost:3000
+#Start local server
 $npm start
 
 #Visit http://localhost:3000/Konnect/

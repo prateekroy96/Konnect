@@ -10,7 +10,9 @@ var io = require('socket.io')(http);
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.use('/Konnect', express.static(path.join(__dirname, 'Frontend')));
+app.use('/', express.static(path.join(__dirname, 'Frontend')));
+
+var port = process.env.PORT || 3000;
 
 //CHAT
 let online_user_data = {};
@@ -188,6 +190,6 @@ io.on('connection', (socket) => {
 
 })
 
-http.listen(3000, function () {
-  console.log('listening on *:3000 \nVisit: http://localhost:3000/Konnect/');
+http.listen(port, function () {
+  console.log('listening on *:'+port+' \nVisit: http://localhost:'+port+'/Konnect/');
 });
