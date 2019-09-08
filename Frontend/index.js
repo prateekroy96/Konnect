@@ -26,9 +26,10 @@ $(function () {
         if (to == user) {
             notify("Try not to talk to yourself");
         }
-        else if (txt != "")
+        else if (txt != ""){
             socket.emit('send_msg', { to: to, text: txt, user: user, group: group });
-
+        }       
+            console.log(process.env.PORT)
     }
 
     //$('#m').hide();
