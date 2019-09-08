@@ -29,7 +29,6 @@ $(function () {
         else if (txt != ""){
             socket.emit('send_msg', { to: to, text: txt, user: user, group: group });
         }       
-            console.log(process.env.PORT)
     }
 
     //$('#m').hide();
